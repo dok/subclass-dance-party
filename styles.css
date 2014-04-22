@@ -10,7 +10,7 @@ body{
 body, a:link, a:visited, a:active{
   color: lightblue;
 }
-.title, .addDancerButton{
+.title, .workerButton{
   padding:5px 12px;
   float:right;
 }
@@ -21,33 +21,16 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.dancer{
+.worker{
   /*border:10px solid red;
   border-radius:10px;*/
   position:absolute;
 }
-.dancer.BlinkyDancer {
+.worker.NormalWorker {
   width: 0;
   height: 0;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-bottom: 20px solid blue;
-  border-top: 0px solid transparent;
-}
-.dancer.MoveDancer {
-  width: 20px;
-  height: 50px;
-  background: white;
-  -moz-border-radius: 100px / 50px;
-  -webkit-border-radius: 100px / 50px;
-  border-radius: 100px / 50px;
-}
-
-.dancer.FlyDancer {
-  width: 20px;
-  height: 50px;
-  background: red;
-  -moz-border-radius: 100px / 50px;
-  -webkit-border-radius: 100px / 50px;
-  border-radius: 100px / 50px;
+  border-top: 0 solid transparent;
 }
