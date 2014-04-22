@@ -39,9 +39,29 @@ $(document).ready(function(){
       $("body").width() * Math.random()
     );
     $body.append(worker.$node);
-
   });
 
-  window.total = 0;
+  $(".addEliteWorker").on("click", function(event) {
+    if(window.game.getCurrent() > 1000) {
+      var worker = new EliteWorker(
+        $("body").height() * Math.random(),
+        $("body").width() * Math.random()
+      );
+      $body.append(worker.$node);
+      window.game.subtract(1000);
+    }
+  });
+
+  $(".addMonthlyRent").on("click", function(event) {
+    if(window.game.getCurrent() > 2000) {
+      var worker = new EliteWorker(
+        $("body").height() * Math.random(),
+        $("body").width() * Math.random()
+      );
+      $body.append(worker.$node);
+      window.game.subtract(2000);
+    }
+  });
+  window.game = new Game();
 });
 

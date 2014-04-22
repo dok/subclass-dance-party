@@ -4,13 +4,18 @@
     <title>Object Dance Party</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
+    <script src="src/game.js"></script>
     <script src="src/worker.js"></script>
     <script src="src/normalWorker.js"></script>
+    <script src="src/eliteWorker.js"></script>
+    <script src="src/MyMonthlyRent.js"></script>
   </head>
   <body>
     <div class="topbar">
-      <span class="title">object dance party</span>
-      <a href="#" class="workerButton addNormalWorker" data-worker-maker-function-name="NormalWorker">Normal</a>
+      <span class="title">Total: 0</span>
+      <a href="#" class="workerButton addNormalWorker" data-worker-maker-function-name="NormalWorker">Normal Worker</a>
+      <a href="#" class="workerButton addEliteWorker" data-worker-maker-function-name="NormalWorker">Elite Worker $1000</a>
+      <a href="#" class="workerButton addMonthlyRent" data-worker-maker-function-name="NormalWorker">My Monthly Rent $2000</a>
     </div>
     <script src="src/init.js"></script>
   </body>

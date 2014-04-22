@@ -1,9 +1,9 @@
 // Creates and returns a new dancer object that can step
-var Worker = function(top, left, name, timeBetweenSteps){
+var Worker = function(top, left, name, timeBetweenSteps, salary){
 
   // use jQuery to create an HTML <span> tag
-  this.$node = $('<span class="worker ' + name + '"></span>');
-  this._timeBetweenSteps = timeBetweenSteps || 100;
+  this.$node = $('<span class="worker ' + name + '">$'+salary+'</span>');
+  this._timeBetweenSteps = timeBetweenSteps || 1000;
   this.step();
   this.setPosition(top, left);
   this._top = top;
@@ -21,6 +21,8 @@ Worker.prototype.step = function(){
     setTimeout(function() {
       that.step();
     }, this._timeBetweenSteps);
+    //Refresh the total
+    $('.title').text('Total: ' + window.game.getCurrent());
 };
 
 Worker.prototype.setPosition = function(top, left){
